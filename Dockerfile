@@ -15,6 +15,8 @@ RUN apt-get update -qq && \
 
 USER ${username}    
 WORKDIR /home/${username}
+RUN mkdir go
+ENV GOPATH=/home/${username}/go
 ENV TERM=screen-256color
     
 CMD ["/bin/bash", "-l"]
