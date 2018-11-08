@@ -17,6 +17,7 @@ USER ${username}
 WORKDIR /home/${username}
 RUN mkdir go
 ENV GOPATH=/home/${username}/go
+ENV PATH=${GOPATH}/bin:${PATH}
 ENV TERM=screen-256color
     
 CMD ["/bin/bash", "-l"]
